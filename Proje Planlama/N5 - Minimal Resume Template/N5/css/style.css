@@ -239,9 +239,12 @@ body.border-dark .main-content:after{
 /*=======================================================
 	Main Section
 =======================================================*/
+
+
+
 .section-main{
 	background-size:cover;
-	background-image:url(../img/deneme.jpg);
+	/*background-image:url(../img/deneme.jpg);*/
 }
 .section-main:before{
 	content: ' ';

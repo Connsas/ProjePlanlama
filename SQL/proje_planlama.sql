@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Anamakine: 127.0.0.1
--- Üretim Zamanı: 17 Nis 2021, 19:40:26
+-- Üretim Zamanı: 05 May 2021, 21:47:11
 -- Sunucu sürümü: 10.4.18-MariaDB
 -- PHP Sürümü: 8.0.3
 
@@ -36,6 +36,13 @@ CREATE TABLE `contact` (
   `web_adress2` varchar(250) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Tablo döküm verisi `contact`
+--
+
+INSERT INTO `contact` (`contact_id`, `adress`, `tel_no1`, `tel_no2`, `web_adress1`, `web_adress2`) VALUES
+(1, '1254 Patterson Street Houston, TX 77025', '713-295-4383', '713-295-4383', 'www.google.com', 'www.example.com');
+
 -- --------------------------------------------------------
 
 --
@@ -54,6 +61,13 @@ CREATE TABLE `education` (
   `education3_date` varchar(20) NOT NULL,
   `education3_description` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Tablo döküm verisi `education`
+--
+
+INSERT INTO `education` (`education_id`, `education1_title`, `education1_date`, `education1_description`, `education2_title`, `education2_date`, `education2_description`, `education3_title`, `education3_date`, `education3_description`) VALUES
+(1, 'CSS College Larkana - Masters Degree', ' 2013-2016', 'Lorem ipsum dolor sit amet, id electram reprimique his, dicta saepe oporteat eos an, esse erat doming at lam. Nec quodsi suscipiantur an, ad graece nemore ocurreret lam, agam ipsum meliore quo ut.', 'CSS College Larkana - Master Degree', ' 2013-2016', 'Lorem ipsum dolor sit amet, id electram reprimique his, dicta saepe oporteat eos an, esse erat doming at lam. Nec quodsi suscipiantur an, ad graece nemore ocurreret lam, agam ipsum meliore quo ut.', 'CSS College Larkana - Master Degree', ' 2013-2016', 'Lorem ipsum dolor sit amet, id electram reprimique his, dicta saepe oporteat eos an, esse erat doming at lam. Nec quodsi suscipiantur an, ad graece nemore ocurreret lam, agam ipsum meliore quo ut.');
 
 -- --------------------------------------------------------
 
@@ -74,6 +88,13 @@ CREATE TABLE `experience` (
   `experience3_description` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Tablo döküm verisi `experience`
+--
+
+INSERT INTO `experience` (`experience_id`, `experience1_title`, `experience1_date`, `experience1_description`, `experience2_title`, `experience2_date`, `experience2_description`, `experience3_title`, `experience3_date`, `experience3_description`) VALUES
+(1, 'CSS College Larkana - Masters Degree', '2013-2016', 'Lorem ipsum dolor sit amet, id electram reprimique his, dicta saepe oporteat eos an, esse erat doming at lam. Nec quodsi suscipiantur an, ad graece nemore ocurreret lam, agam ipsum meliore quo ut.', 'CSS College Larkana - Masters Degree', '2013-2016', 'Lorem ipsum dolor sit amet, id electram reprimique his, dicta saepe oporteat eos an, esse erat doming at lam. Nec quodsi suscipiantur an, ad graece nemore ocurreret lam, agam ipsum meliore quo ut.', 'CSS College Larkana - Masters Degree', '2013-2016', 'Lorem ipsum dolor sit amet, id electram reprimique his, dicta saepe oporteat eos an, esse erat doming at lam. Nec quodsi suscipiantur an, ad graece nemore ocurreret lam, agam ipsum meliore quo ut.');
+
 -- --------------------------------------------------------
 
 --
@@ -91,6 +112,13 @@ CREATE TABLE `informations` (
   `cv_adress` varchar(250) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Tablo döküm verisi `informations`
+--
+
+INSERT INTO `informations` (`informations_id`, `name`, `job`, `age`, `country`, `city`, `biography`, `cv_adress`) VALUES
+(1, 'İsmail Öner', 'Öğrenci', 20, 'Türkiye', 'Malatya', 'Qui ne indoctum electram vituperatoribus. Eirmod tamquam efficiendi mei cu, eum idque voluptatum ad, quo id tollit regione prompta. Cu probo iusto assentior eos, usu summo perpetua ne. Te suas phaedrum ullamcorper has. Ea mei ponderum rationibus dissentias. Inani phaedrum suavitate eu qui, vide aperiri facilis est eu. Te appetere cotidieque pro, duo eu assum facete instructior, no autem aeterno reprimique nec. Pri cu delectus adolescens, eruditi placerat cu sed, zril nonumes forensibus in eam. Eam ne dolore diceret pericula, in vis numquam pertinax. Vel ne dolorum eloquentiam, et vel senserit incorrupte neglegentur, pro cu audiam ocurreret reprimique. Qui ne indoctum electram vituperatoribus. Eirmod tamquam efficiendi mei cu, eum idque voluptatum ad, quo id tollit regione prompta. Cu probo iusto assentior. Qui ne indoctum electram vituperatoribus. Eirmod tamquam efficiendi mei cu, eum idque voluptatum ad.', 'CV.docx');
+
 -- --------------------------------------------------------
 
 --
@@ -102,15 +130,15 @@ CREATE TABLE `main_page` (
   `site_title` varchar(50) NOT NULL,
   `title` varchar(50) NOT NULL,
   `description` varchar(250) NOT NULL,
-  `color` varchar(10) NOT NULL
+  `image` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Tablo döküm verisi `main_page`
 --
 
-INSERT INTO `main_page` (`main_page_id`, `site_title`, `title`, `description`, `color`) VALUES
-(1, 'Merhabalar', 'İSMAİL', 'Sayfama Hoşgeldiniz', '');
+INSERT INTO `main_page` (`main_page_id`, `site_title`, `title`, `description`, `image`) VALUES
+(1, 'Kişisel Site', 'BEN İSMAİL ÖNER', 'Sayfama Hoşgeldiniz', 'deneme.jpg');
 
 -- --------------------------------------------------------
 
@@ -134,6 +162,13 @@ CREATE TABLE `skills` (
   `skill6_counter` varchar(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Tablo döküm verisi `skills`
+--
+
+INSERT INTO `skills` (`skills_id`, `skill1`, `skill1_counter`, `skill2`, `skill2_counter`, `skill3`, `skill3_counter`, `skill4`, `skill4_counter`, `skill5`, `skill5_counter`, `skill6`, `skill6_counter`) VALUES
+(1, 'HTML/CSS', '85', 'php', '90', 'jQuery', '75', 'JavaScript', '85', 'WordPress', '90', 'SEO', '75');
+
 -- --------------------------------------------------------
 
 --
@@ -156,6 +191,13 @@ CREATE TABLE `social_media` (
   `social_media_adress6` varchar(250) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Tablo döküm verisi `social_media`
+--
+
+INSERT INTO `social_media` (`social_media_id`, `social_media_icon1`, `social_media_adress1`, `social_media_icon2`, `social_media_adress2`, `social_media_icon3`, `social_media_adress3`, `social_media_icon4`, `social_media_adress4`, `social_media_icon5`, `social_media_adress5`, `social_media_icon6`, `social_media_adress6`) VALUES
+(1, 'facebook.png', 'https://www.facebook.com/', 'instagram.png', 'https://www.instagram.com/', 'linkedin.png', 'https://tr.linkedin.com/', 'twitter.png', 'https://twitter.com/', 'github.png', 'https://github.com/', 'youtube.png', 'https://www.youtube.com/');
+
 -- --------------------------------------------------------
 
 --
@@ -174,7 +216,7 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`user_id`, `user_name`, `email`, `password`) VALUES
-(22, 'a', 'a@a.com', 'MTIzNDU2Nw==');
+(23, 'a', 'a@a.com', 'MTIzNDU2Nw==');
 
 --
 -- Dökümü yapılmış tablolar için indeksler
@@ -236,25 +278,25 @@ ALTER TABLE `user`
 -- Tablo için AUTO_INCREMENT değeri `contact`
 --
 ALTER TABLE `contact`
-  MODIFY `contact_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `contact_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- Tablo için AUTO_INCREMENT değeri `education`
 --
 ALTER TABLE `education`
-  MODIFY `education_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `education_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- Tablo için AUTO_INCREMENT değeri `experience`
 --
 ALTER TABLE `experience`
-  MODIFY `experience_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `experience_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- Tablo için AUTO_INCREMENT değeri `informations`
 --
 ALTER TABLE `informations`
-  MODIFY `informations_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `informations_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- Tablo için AUTO_INCREMENT değeri `main_page`
@@ -266,19 +308,19 @@ ALTER TABLE `main_page`
 -- Tablo için AUTO_INCREMENT değeri `skills`
 --
 ALTER TABLE `skills`
-  MODIFY `skills_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `skills_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- Tablo için AUTO_INCREMENT değeri `social_media`
 --
 ALTER TABLE `social_media`
-  MODIFY `social_media_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `social_media_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- Tablo için AUTO_INCREMENT değeri `user`
 --
 ALTER TABLE `user`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
