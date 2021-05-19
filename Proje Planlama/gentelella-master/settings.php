@@ -17,7 +17,6 @@ $fetch = $fetch_settings->fetch(PDO::FETCH_ASSOC);
 <div class="right_col" role="main">
 <div class="x_panel">
     <div class="x_content">
-    
         <form class="" action="process.php" method="POST" novalidate>
             <span class="section">Kullanıcı Ayarları Sayfası</span>
             <?php if (@$_GET['insert'] == 'ok'){ ?>
@@ -62,6 +61,30 @@ $fetch = $fetch_settings->fetch(PDO::FETCH_ASSOC);
                     Şifre En Az 6 Karakterli Olmalı
                 </div>                         
                 <?php } ?>
+                <?php  
+                 if (@$_GET['status']  == 'same_password'){ ?>
+                <div class="alert alert-danger alert-dismissible " role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span>
+                    </button>
+                    Eski Şifre ile Yeni Şifre Aynı Olamaz
+                </div>                         
+                <?php } ?>
+                <?php  
+                 if (@$_GET['status']  == 'wrong_password'){ ?>
+                <div class="alert alert-danger alert-dismissible " role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span>
+                    </button>
+                    Eski Şifre Yanlış
+                </div>                         
+                <?php } ?>
+                <?php  
+                 if (@$_GET['status']  == 'wrong_repeat'){ ?>
+                <div class="alert alert-danger alert-dismissible " role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span>
+                    </button>
+                    Yeni Şifre ile Yeni Şifre Tekrarı Aynı Değil
+                </div>                         
+                <?php } ?>
                 <?php if (@$_GET['field']  == 'blank'){ ?>
                 <div class="alert alert-danger alert-dismissible " role="alert">
                     <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span>
@@ -80,9 +103,19 @@ $fetch = $fetch_settings->fetch(PDO::FETCH_ASSOC);
                     <input class="form-control" required='required' class='optional' name="user_name" data-validate-length-range="5,15" type="text" /></div>
             </div>
             <div class="field item form-group">
-                <label class="col-form-label col-md-3 col-sm-3  label-align">Şifre<span class="required">*</span></label>
+                <label class="col-form-label col-md-3 col-sm-3  label-align">Eski Şifre<span class="required">*</span></label>
                 <div class="col-md-6 col-sm-6">
                     <input class="form-control" required='required' class='optional' name="password" data-validate-length-range="5,15" type="password" /></div>
+            </div>
+            <div class="field item form-group">
+                <label class="col-form-label col-md-3 col-sm-3  label-align">Yeni Şifre<span class="required">*</span></label>
+                <div class="col-md-6 col-sm-6">
+                    <input class="form-control" required='required' class='optional' name="new_password" data-validate-length-range="5,15" type="password" /></div>
+            </div>
+            <div class="field item form-group">
+                <label class="col-form-label col-md-3 col-sm-3  label-align">Yeni Şifre Tekrarı<span class="required">*</span></label>
+                <div class="col-md-6 col-sm-6">
+                    <input class="form-control" required='required' class='optional' name="new_password_repeat" data-validate-length-range="5,15" type="password" /></div>
             </div>
             <div class="ln_solid">
                 <div class="form-group">

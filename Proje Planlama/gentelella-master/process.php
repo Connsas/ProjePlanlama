@@ -544,6 +544,8 @@ if(isset($_POST['insert_settings'])){
   $user_name = $_POST['user_name'];
   $email = $_POST['email'];
   $password = $_POST['password'];
+  $new_password = $_POST['new_password'];
+  $new_password_repeat = $_POST['new_password_repeat'];
   
   $insert_settings = $db->prepare("INSERT INTO user SET
   user_name='$user_name',
@@ -560,30 +562,48 @@ if(isset($_POST['insert_settings'])){
 }
 
 // Settings Update
+$fetch_settings = $db->prepare("SELECT * FROM user");
+$fetch_settings->execute();
+
+$fetch = $fetch_settings->fetch(PDO::FETCH_ASSOC);
 
 if(isset($_POST['change_settings'])){
   $user_name = $_POST['user_name'];
   $email = $_POST['email'];
   $password = $_POST['password'];
-  $pass = base64_encode($password);
+  $new_password = $_POST['new_password'];
+  $new_password_repeat = $_POST['new_password_repeat'];
+  $pass = base64_decode($fetch['password']);
+  $new_pass = base64_encode($new_password);
 
- if(strlen($email)>0&&strlen($user_name)>0&&strlen($password)>0){
-  if(strlen($password)<=5){
-    header("Location: settings.php?change=lowchar");
-  }
-  else{
-  $change_settings = $db->prepare("UPDATE user SET
-  user_name='$user_name',
-  email='$email',
-  password='$pass'
-  ");
-
-  $change = $change_settings ->execute();
-  if($change){
-    header("Location: settings_logout.php");
+ if(strlen($email)>0&&strlen($user_name)>0&&strlen($password)>0&&strlen($new_password)>0&&strlen($new_password_repeat)>0){
+  if(strlen($new_password)>5){
+    if($pass<>$new_password){
+      if($pass==$password){
+        if($new_password==$new_password_repeat){
+          $change_settings = $db->prepare("UPDATE user SET
+          user_name='$user_name',
+          email='$email',
+          password='$new_pass'
+          ");
+        
+          $change = $change_settings ->execute();
+          if($change){
+            header("Location: settings_logout.php");
+          }else{
+            header("Location: settings.php?change=no");
+          }
+        }else{
+          header("Location: settings.php?status=wrong_repeat");
+        }
+      }else{
+        header("Location: settings.php?status=wrong_password");
+      }
+    }else{
+      header("Location: settings.php?status=same_password");
+    }
   }else{
-    header("Location: settings.php?change=no");
-  }
+    header("Location: settings.php?change=lowchar");
   }
  }else{
   header("Location: settings.php?field=blank");
