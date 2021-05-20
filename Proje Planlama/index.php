@@ -22,12 +22,12 @@ $bilgiyi_cek = $sorgu->fetch(PDO :: FETCH_ASSOC);
 		<!--=====================================================
 			CSS Stylesheets
 		=====================================================-->
-		<link rel='stylesheet' type='text/css' href='bootstrap/css/bootstrap.min.css' >
-		<link rel='stylesheet' type='text/css' href='css/linea.css' >
-		<link rel='stylesheet' type='text/css' href='css/ionicons.min.css' >
-		<link rel='stylesheet' type='text/css' href='css/owl.carousel.css' >
-		<link rel='stylesheet' type='text/css' href='css/magnific-popup.css' >
-		<link rel='stylesheet' type='text/css' href='css/style.css' >
+		<link rel='stylesheet' type='text/css' href='assets/bootstrap/css/bootstrap.min.css' >
+		<link rel='stylesheet' type='text/css' href='assets/css/linea.css' >
+		<link rel='stylesheet' type='text/css' href='assets/css/ionicons.min.css' >
+		<link rel='stylesheet' type='text/css' href='assets/css/owl.carousel.css' >
+		<link rel='stylesheet' type='text/css' href='assets/css/magnific-popup.css' >
+		<link rel='stylesheet' type='text/css' href='assets/css/style.css' >
 		
 	</head>
 	<body>
@@ -114,7 +114,7 @@ $bilgiyi_cek = $sorgu->fetch(PDO :: FETCH_ASSOC);
 				<!--=====================================================
 					Main Section
 				=====================================================-->
-				<section style="background-image: url('img/<?php echo $bilgiyi_cek['image']?>')" id='intro' class='section section-main active' >
+				<section style="background-image: url('assets/img/<?php echo $bilgiyi_cek['image']?>')" id='intro' class='section section-main active' >
 					
 					<div class='container-fluid' >
 					
@@ -216,22 +216,22 @@ $bilgiyi_cek = $sorgu->fetch(PDO :: FETCH_ASSOC);
 									<div class="social-icon">
 
 										<a href = '<?php echo $fetch_social_executed['social_media_adress1'] ?>' target="blank">
-											<img  src="img/<?php echo $fetch_social_executed['social_media_icon1'] ?>" alt=""/></a>
+											<img  src="assets/img/<?php echo $fetch_social_executed['social_media_icon1'] ?>" alt=""/></a>
 
 										<a href = '<?php echo $fetch_social_executed['social_media_adress2'] ?>' target="blank">
-											<img  src="img/<?php echo $fetch_social_executed['social_media_icon2'] ?>" alt=""/></a>
+											<img  src="assets/img/<?php echo $fetch_social_executed['social_media_icon2'] ?>" alt=""/></a>
 										
 										<a href = '<?php echo $fetch_social_executed['social_media_adress3'] ?>' target="blank">
-											<img  src="img/<?php echo $fetch_social_executed['social_media_icon3'] ?>" alt=""/></a>
+											<img  src="assets/img/<?php echo $fetch_social_executed['social_media_icon3'] ?>" alt=""/></a>
 	
 										<a href = '<?php echo $fetch_social_executed['social_media_adress4'] ?>' target="blank">
-											<img  src="img/<?php echo $fetch_social_executed['social_media_icon4'] ?>" alt=""/></a>
+											<img  src="assets/img/<?php echo $fetch_social_executed['social_media_icon4'] ?>" alt=""/></a>
 										
 										<a href = '<?php echo $fetch_social_executed['social_media_adress5'] ?>' target="blank">
-											<img  src="img/<?php echo $fetch_social_executed['social_media_icon5'] ?>" alt=""/></a>
+											<img  src="assets/img/<?php echo $fetch_social_executed['social_media_icon5'] ?>" alt=""/></a>
 	
 										<a href = '<?php echo $fetch_social_executed['social_media_adress6'] ?>' target="blank">
-											<img  src="img/<?php echo $fetch_social_executed['social_media_icon6'] ?>" alt=""/></a>
+											<img  src="assets/img/<?php echo $fetch_social_executed['social_media_icon6'] ?>" alt=""/></a>
 											
 												
 									</div>
@@ -696,12 +696,12 @@ $bilgiyi_cek = $sorgu->fetch(PDO :: FETCH_ASSOC);
 		<!--=====================================================
 			JavaScript Files
 		=====================================================-->
-		<script src='js/jquery.min.js' ></script>
-		<script src='js/jquery.shuffle.min.js' ></script>
-		<script src='js/owl.carousel.min.js' ></script>
-		<script src='js/jquery.magnific-popup.min.js' ></script>
-		<script src='js/validator.min.js' ></script>
-		<script src='js/script.js' ></script>
+		<script src='assets/js/jquery.min.js' ></script>
+		<script src='assets/js/jquery.shuffle.min.js' ></script>
+		<script src='assets/js/owl.carousel.min.js' ></script>
+		<script src='assets/js/jquery.magnific-popup.min.js' ></script>
+		<script src='assets/js/validator.min.js' ></script>
+		<script src='assets/js/script.js' ></script>
 		
 	</body>
 </html>
