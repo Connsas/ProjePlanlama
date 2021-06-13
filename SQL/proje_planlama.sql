@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Anamakine: 127.0.0.1
--- Üretim Zamanı: 05 May 2021, 21:47:11
+-- Üretim Zamanı: 13 Haz 2021, 09:30:40
 -- Sunucu sürümü: 10.4.18-MariaDB
 -- PHP Sürümü: 8.0.3
 
@@ -67,7 +67,7 @@ CREATE TABLE `education` (
 --
 
 INSERT INTO `education` (`education_id`, `education1_title`, `education1_date`, `education1_description`, `education2_title`, `education2_date`, `education2_description`, `education3_title`, `education3_date`, `education3_description`) VALUES
-(1, 'CSS College Larkana - Masters Degree', ' 2013-2016', 'Lorem ipsum dolor sit amet, id electram reprimique his, dicta saepe oporteat eos an, esse erat doming at lam. Nec quodsi suscipiantur an, ad graece nemore ocurreret lam, agam ipsum meliore quo ut.', 'CSS College Larkana - Master Degree', ' 2013-2016', 'Lorem ipsum dolor sit amet, id electram reprimique his, dicta saepe oporteat eos an, esse erat doming at lam. Nec quodsi suscipiantur an, ad graece nemore ocurreret lam, agam ipsum meliore quo ut.', 'CSS College Larkana - Master Degree', ' 2013-2016', 'Lorem ipsum dolor sit amet, id electram reprimique his, dicta saepe oporteat eos an, esse erat doming at lam. Nec quodsi suscipiantur an, ad graece nemore ocurreret lam, agam ipsum meliore quo ut.');
+(1, 'CSS College Larkana - Master Degree', ' 2013-2016', 'Lorem ipsum dolor sit amet, id electram reprimique his, dicta saepe oporteat eos an, esse erat doming at lam. Nec quodsi suscipiantur an, ad graece nemore ocurreret lam, agam ipsum meliore quo ut.', 'CSS College Larkana - Master Degree', ' 2013-2016', 'Lorem ipsum dolor sit amet, id electram reprimique his, dicta saepe oporteat eos an, esse erat doming at lam. Nec quodsi suscipiantur an, ad graece nemore ocurreret lam, agam ipsum meliore quo ut.', 'CSS College Larkana - Master Degree', '2013-2016', 'Lorem ipsum dolor sit amet, id electram reprimique his, dicta saepe oporteat eos an, esse erat doming at lam. Nec quodsi suscipiantur an, ad graece nemore ocurreret lam, agam ipsum meliore quo ut.');
 
 -- --------------------------------------------------------
 
@@ -196,7 +196,7 @@ CREATE TABLE `social_media` (
 --
 
 INSERT INTO `social_media` (`social_media_id`, `social_media_icon1`, `social_media_adress1`, `social_media_icon2`, `social_media_adress2`, `social_media_icon3`, `social_media_adress3`, `social_media_icon4`, `social_media_adress4`, `social_media_icon5`, `social_media_adress5`, `social_media_icon6`, `social_media_adress6`) VALUES
-(1, 'facebook.png', 'https://www.facebook.com/', 'instagram.png', 'https://www.instagram.com/', 'linkedin.png', 'https://tr.linkedin.com/', 'twitter.png', 'https://twitter.com/', 'github.png', 'https://github.com/', 'youtube.png', 'https://www.youtube.com/');
+(1, 'facebook.png', 'https:/facebook.com/', 'instagram.png', 'https://www.instagram.com/', 'linkedin.png', 'https://tr.linkedin.com/', 'twitter.png', 'https://twitter.com/', 'github.png', 'https://github.com/', 'youtube.png', 'https://www.youtube.com/');
 
 -- --------------------------------------------------------
 
@@ -216,7 +216,7 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`user_id`, `user_name`, `email`, `password`) VALUES
-(23, 'a', 'a@a.com', 'MTIzNDU2Nw==');
+(25, 'admin', 'admin@a.com', 'MTIxMjEy');
 
 --
 -- Dökümü yapılmış tablolar için indeksler
@@ -320,7 +320,7 @@ ALTER TABLE `social_media`
 -- Tablo için AUTO_INCREMENT değeri `user`
 --
 ALTER TABLE `user`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
